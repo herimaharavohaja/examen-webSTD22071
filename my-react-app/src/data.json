@@ -1,0 +1,11 @@
+{
+  "labels": ["07-02", "07-04", "07-06"],
+  "datasets": [
+    {
+      "label": "Flux Modulaires 1",
+      "data": [100000, 90000],
+      "borderColor": "rgba(255, 99, 132, 1)",
+      "fill": false
+    }
+  ]
+}
