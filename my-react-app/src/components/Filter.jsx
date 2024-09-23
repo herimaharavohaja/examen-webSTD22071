@@ -1,6 +1,15 @@
 import { persons, types } from "../mock/data";
+import { useState } from "react";
 
-function Filter({ setStartDate, setEndDate }) {
+function Filter({ setStartDate, setEndDate, setCheckedTypes }) {
+  const [checked, setChecked] = useState(types.reduce((acc, type) => ({ ...acc, [type]: false }), {}));
+
+  const handleCheckboxChange = (type) => {
+    const updatedChecked = { ...checked, [type]: !checked[type] };
+    setChecked(updatedChecked);
+    setCheckedTypes(Object.keys(updatedChecked).filter(t => updatedChecked[t]));
+  };
+
   return (
     <div className="flex flex-col p-4 bg-white rounded shadow-md">
       <div className="flex flex-row items-center justify-start gap-2 mb-4">
@@ -19,10 +28,16 @@ function Filter({ setStartDate, setEndDate }) {
         <button className="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-500 transition duration-200 ease-in-out">Tous</button>
       </div>
       <div className="flex flex-row gap-2 mb-4">
-        {types.map((t, i) => (
+        {types.map((type, i) => (
           <div key={i} className="flex items-center">
-            <input type="checkbox" id={`type-${i}`} className="mt-2" />
-            <label htmlFor={`type-${i}`} className="ml-2">{t}</label>
+            <input 
+              type="checkbox" 
+              id={`type-${i}`} 
+              checked={checked[type]} 
+              onChange={() => handleCheckboxChange(type)}
+              className="mt-2" 
+            />
+            <label htmlFor={`type-${i}`} className="ml-2">{type}</label>
           </div>
         ))}
       </div>
