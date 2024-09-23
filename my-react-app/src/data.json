@@ -1,30 +1,14 @@
-
 {
-  "patrimoine": [
-    {
-      "id": 1,
-      "agregat": "John",
-      "tresorerie": 5000,
-      "immobilisations": 15000,
-      "obligation": 2000,
-      "date": "2023-01-01"
-    },
-    {
-      "id": 2,
-      "agregat": "Jane",
-      "tresorerie": 7000,
-      "immobilisations": 25000,
-      "obligation": 5000,
-      "date_entre": "2023-03-01",
-      "date": "2024-03-01"
-    },
-    {
-      "id": 3,
-      "agregat": "Bob",
-      "tresorerie": 10000,
-      "immobilisations": 20000,
-      "obligation": 3000,
-      "date": "2023-05-15"
-    }
+  "checkboxes": [
+      { "label": "Agregat", "value": "agregat" },
+      { "label": "Trésorerie", "value": "tresorerie" }
+  ],
+  "dateFields": [
+      { "label": "Date d'entrée", "value": "2024-07-01" },
+      { "label": "Date de sortie", "value": "2024-07-16" }
+  ],
+  "fluxData": [
+      { "type": "impossible", "value": "Flux Impossible" },
+      { "type": "journalier", "value": "Flux Journalier" }
   ]
 }
