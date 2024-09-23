@@ -1,11 +1,30 @@
+
 {
-  "labels": ["07-02", "07-04", "07-06"],
-  "datasets": [
+  "patrimoine": [
     {
-      "label": "Flux Modulaires 1",
-      "data": [100000, 90000],
-      "borderColor": "rgba(255, 99, 132, 1)",
-      "fill": false
+      "id": 1,
+      "agregat": "John",
+      "tresorerie": 5000,
+      "immobilisations": 15000,
+      "obligation": 2000,
+      "date": "2023-01-01"
+    },
+    {
+      "id": 2,
+      "agregat": "Jane",
+      "tresorerie": 7000,
+      "immobilisations": 25000,
+      "obligation": 5000,
+      "date_entre": "2023-03-01",
+      "date": "2024-03-01"
+    },
+    {
+      "id": 3,
+      "agregat": "Bob",
+      "tresorerie": 10000,
+      "immobilisations": 20000,
+      "obligation": 3000,
+      "date": "2023-05-15"
     }
   ]
 }

@@ -1,7 +1,9 @@
 import React from 'react';
+import Flux from './Flux';
 
 function Patrimoine() {
   return (
+    <>
     <form className="max-w-md mx-auto p-4 bg-white rounded-lg shadow-md">
       <h2 className="text-lg font-bold mb-4">Gestion du Patrimoine</h2>
       
@@ -44,9 +46,11 @@ function Patrimoine() {
       </div>
 
       <button className="w-full bg-blue-500 text-white p-2 rounded hover:bg-blue-600">
-        Soumettre
+        Submit
       </button>
     </form>
+    <Flux/>
+    </>
   );
 }
 
